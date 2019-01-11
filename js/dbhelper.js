@@ -154,6 +154,13 @@ class DBHelper {
   }
 
   /**
+   * Restaurant image descritpion.
+   */
+  static description(restaurant) {
+    return `restaurant called ${restaurant.name} in ${restaurant.neighborhood} ${restaurant.address}`;
+  }
+
+  /**
    * Map marker for a restaurant.
    */
    static mapMarkerForRestaurant(restaurant, map) {
