@@ -5,6 +5,7 @@
 //     console.log('Service worker: install');
 // });
 
+// followed example from https://www.youtube.com/watch?v=ksXwaWHCW6k
 const cacheName = 'restaurants_reviews_v1';
 // activate event
 addEventListener('activate', e => {
