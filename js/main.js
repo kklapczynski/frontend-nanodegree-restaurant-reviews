@@ -5,6 +5,23 @@ var newMap
 var markers = []
 
 /**
+ * Register service worker
+ */
+// check if available in browser
+if (navigator.serviceWorker) {
+  // register when page loads
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('sw.js').then(function() {
+        console.log('Registration worked!');
+      })
+      .catch(function(error) {
+        console.log('Registration failed!');
+      });
+  });
+}
+
+/**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
